@@ -1,10 +1,10 @@
 export const experiences = [
   {
     id: 1,
-    title: "Junior Software Engineer",
-    company: "Examedia Solutions Sdn Bhd",
-    location: "Shah Alam, Selangor",
-    duration: "(Jun 2021 - Jan 2022)"
+    title: "Software Engineer (Mobile)",
+    company: "Maybank",
+    url: "https://www.maybank2u.com.my/home/m2u/common",
+    duration: "(May 2024 - Present)"
   },
   {
     id: 2,
@@ -16,9 +16,9 @@ export const experiences = [
   },
   {
     id: 3,
-    title: "Developer (Mobile)",
-    company: "Maybank Investment",
-    url: "https://www.maybank2u.com.my/home/m2u/common",
-    duration: "(May 2024 - Present)"
-  }
+    title: "Junior Software Engineer",
+    company: "Examedia Solutions Sdn Bhd",
+    location: "Shah Alam, Selangor",
+    duration: "(Jun 2021 - Jan 2022)"
+  },
 ]

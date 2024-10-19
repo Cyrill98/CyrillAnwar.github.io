@@ -10,9 +10,9 @@ export const personalData = {
   facebook: 'https://www.facebook.com/cyrill.anwar/',
   linkedIn: 'https://www.linkedin.com/in/cyrill-anwar',
   twitter: 'https://x.com/cyrillanwar98',
-  // stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  tiktok: 'https://www.tiktok.com/@cyrillanwar',
-  leetcode: "https://leetcode.com/said3812/",
+  instagram: 'https://www.instagram.com/cyrillanwar/',
+    // stackOverflow: 'https://stackoverflow.com/users/12855864/cyrill-anwar?',
+    tiktok: 'https://www.tiktok.com/@cyrillanwar',
   devUsername: "cyrill98",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1eAxeBGQj49OLrx2oiRmh3sosYZ23STHS/view?usp=sharing"
 }

@@ -1,7 +1,10 @@
 "use client"
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-const GlowCard = ({ children , identifier}) => {
+const GlowCard = ({ children , identifier, navigate}) => {
+  const router = useRouter();  // Initialize router
+
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
@@ -14,6 +17,9 @@ const GlowCard = ({ children , identifier}) => {
       vertical: false,
       opacity: 0,
     };
+
+    console.log('navigate pass ->', navigate);
+
 
     const UPDATE = (event) => {
       for (const CARD of CARDS) {
@@ -67,9 +73,17 @@ const GlowCard = ({ children , identifier}) => {
     };
   }, [identifier]);
 
+  const navigateCompanyWebsite = (url) => {
+    if (url) {
+      router.push(url);  // Navigate client-side to the URL
+    } else {
+      console.log('No URL provided');
+    }
+  };
+
   return (
     <div className={`glow-container-${identifier} glow-container`}>
-      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent w-full`}>
+      <article onClick={() => navigateCompanyWebsite(navigate)} className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent w-full`}>
         <div className="glows"></div>
         {children}
       </article>

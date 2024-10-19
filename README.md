@@ -7,12 +7,6 @@
 
 ---
 
-# Developer Portfolio
-
-### Are you struggling to create a professional portfolio website? Look no further! You can use the Developer Portfolio template and create your very own personalized portfolio today! My website is designed to be user-friendly and easily customizable, making it perfect for both developers and freelancers.
-
----
-
 # Demo :movie_camera:
 
 ![](./public/image/screen.png)
@@ -115,22 +109,22 @@ Eg:
 
 ```javascript
 export const personalData = {
-  name: "ABU SAID",
-  profile: "/profile.png",
-  designation: "Full-Stack Software Developer",
-  description: "My name is ABU SAID....",
-  email: "abusaid7388@gmail.com",
-  phone: "+8801608797655",
-  address: "Dhaka, Bangladesh",
-  github: "https://github.com/said7388",
-  facebook: "https://www.facebook.com/abusaid.riyaz/",
-  linkedIn: "https://www.linkedin.com/in/abu-said-bd/",
-  twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
+  name: "CYRILL ANWAR",
+  profile: '/profile.jpeg',
+  designation: "Software Engineer",
+  description: "My name is Cyrill Anwar. ....",
+  email: 'cyrillanwar98@gmail.com',
+  phone: '+601117536005',
+  address: 'Kuala Lumpur, Malaysia',
+  github: 'https://github.com/cyrill98',
+  facebook: 'https://www.facebook.com/cyrill.anwar/',
+  linkedIn: 'https://www.linkedin.com/in/cyrill-anwar',
+  twitter: 'https://x.com/cyrillanwar98',
+  tiktok: 'https://www.tiktok.com/@cyrillanwar',
   leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "...",
-};
+  devUsername: "cyrill98",
+  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
+}
 ```
 
 `devUsername` Used for fetching blog from `dev.to`.

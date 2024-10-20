@@ -124,6 +124,11 @@ function HeroSection() {
                 <span className="text-gray-400">,</span>
               </div>
               <div>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">religion:</span>
+                <span className="text-yellow-400">Muslim</span>
+                <span className="text-gray-400">,</span>
+              </div>
+              <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">bornDate:</span>
                 <span className="text-orange-400">09/09/1998</span>
                 <span className="text-gray-400">,</span>

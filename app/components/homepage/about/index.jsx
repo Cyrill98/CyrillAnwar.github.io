@@ -36,7 +36,7 @@ function AboutSection() {
                 className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
               />
               <div className="pt-3">
-              <ReactAudioPlayer src="/Someday.mp3" autoPlay={true} controls style={{ caretColor: 'dark'}} volume={0.5}/>
+              <ReactAudioPlayer src="/Aspalela.mp3" autoPlay={true} controls style={{ caretColor: 'dark'}} volume={0.5}/>
               </div>
             </div>
           </div>

@@ -1,8 +1,11 @@
 // @flow strict
-'use client'
+"use client";
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import ReactAudioPlayer from "react-audio-player";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { profileImg } from "@/utils/data/profileImg";
 
 function AboutSection() {
   return (
@@ -28,15 +31,39 @@ function AboutSection() {
           {/* Right section for image and music player */}
           <div className="flex justify-center order-1 lg:order-2">
             <div className="flex flex-col items-center">
-              <Image
-                src={personalData.profile}
-                width={280}
-                height={280}
-                alt="Cyrill Anwar"
-                className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-              />
+              <Carousel
+                showStatus={false}
+                dynamicHeight={false}
+                showThumbs={false}
+                swipeable
+                infiniteLoop={true}
+                autoPlay
+                emulateTouch
+                className="max-w-xs lg:max-w-sm" // Restricting the carousel width
+              >
+                  {
+                    profileImg.map((img, index) => {return (
+                      <div className="min-h-[200px] min-w-[200px]" key={img.id}>
+                      <Image
+                        src={img.img}
+                        width={160}
+                        height={200}
+                        alt="profile-2"
+                        className="w-full h-full object-cover"
+                      />
+                </div>
+                    )})
+                  }
+              </Carousel>
               <div className="pt-3">
-              <ReactAudioPlayer src="/Aspalela.mp3" autoPlay={true} controls style={{ caretColor: 'dark'}} volume={0.6}/>
+                <ReactAudioPlayer
+                  src="/rumahkerumah.mp3"
+                  autoPlay={true}
+                  loop={true}
+                  controls
+                  style={{ caretColor: "dark" }}
+                  volume={0.5}
+                />
               </div>
             </div>
           </div>

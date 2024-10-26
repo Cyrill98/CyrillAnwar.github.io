@@ -36,6 +36,7 @@ function AboutSection() {
                 dynamicHeight={false}
                 showThumbs={false}
                 swipeable
+                infiniteLoop={true}
                 autoPlay
                 emulateTouch
                 className="max-w-xs lg:max-w-sm" // Restricting the carousel width
@@ -56,8 +57,9 @@ function AboutSection() {
               </Carousel>
               <div className="pt-3">
                 <ReactAudioPlayer
-                  src="/Aspalela.mp3"
+                  src="/rumahkerumah.mp3"
                   autoPlay={true}
+                  loop={true}
                   controls
                   style={{ caretColor: "dark" }}
                   volume={0.5}

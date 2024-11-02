@@ -57,7 +57,7 @@ function AboutSection() {
               </Carousel>
               <div className="pt-3">
                 <ReactAudioPlayer
-                  src="/rumahkerumah.mp3"
+                  src={["/crush.mp3"]}
                   autoPlay={true}
                   loop={true}
                   controls

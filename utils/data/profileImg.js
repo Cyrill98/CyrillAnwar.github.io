@@ -35,8 +35,8 @@ export const profileImg = [
         id: 9,
         img: '/img12.jpeg',
     },
-    {
-        id: 10,
-        img: '/img13.jpeg',
-    }
+    // {
+    //     id: 10,
+    //     img: '/img13.jpeg',
+    // }
 ]

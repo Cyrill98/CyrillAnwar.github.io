@@ -62,7 +62,7 @@ function AboutSection() {
                   loop={true}
                   controls
                   style={{ caretColor: "dark" }}
-                  volume={0.5}
+                  // volume={0.5}
                 />
               </div>
             </div>

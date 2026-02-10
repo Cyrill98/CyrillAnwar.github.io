@@ -71,7 +71,7 @@ const GlowCard = ({ children , identifier, navigate}) => {
     return () => {
       document.body.removeEventListener('pointermove', UPDATE);
     };
-  }, [identifier]);
+  }, [identifier, navigate]);
 
   const navigateCompanyWebsite = (url) => {
     if (url) {

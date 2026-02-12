@@ -29,7 +29,7 @@ export const profileImg = [
     },
     {
         id: 8,
-        img: '/img11.jpeg',
+        img: '/profile3.jpeg',
     },
     {
         id: 9,

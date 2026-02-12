@@ -29,15 +29,16 @@ function ResumeButton({ resumeUrl }) {
       {/* Backdrop + Dialog */}
       {showDialog && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center px-4"
+          className="fixed inset-0 z-[9999] flex items-center justify-center px-4 py-6 overflow-y-auto"
+          style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0 }}
           onClick={handleClose}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
 
           {/* Dialog */}
           <div
-            className="relative w-full max-w-md rounded-2xl border border-[#1b2c68a0] bg-gradient-to-br from-[#0d1224] to-[#0a0d37] p-6 md:p-8 shadow-2xl"
+            className="relative w-[calc(100%-2rem)] max-w-md mx-auto rounded-2xl border border-[#1b2c68a0] bg-gradient-to-br from-[#0d1224] to-[#0a0d37] p-5 sm:p-6 md:p-8 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Accent line */}

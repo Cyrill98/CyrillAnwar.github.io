@@ -1,11 +1,11 @@
 // @flow strict
 "use client";
 import { personalData } from "@/utils/data/personal-data";
-import ReactAudioPlayer from "react-audio-player";
 import { profileImg } from "@/utils/data/profileImg";
 import dynamic from "next/dynamic";
 
 const CardDeck = dynamic(() => import("./card-deck"), { ssr: false });
+const MusicPlayer = dynamic(() => import("./music-player"), { ssr: false });
 
 function AboutSection() {
   return (
@@ -32,14 +32,14 @@ function AboutSection() {
           <div className="flex justify-center order-1 lg:order-2">
             <div className="flex flex-col items-center">
               <CardDeck images={profileImg} />
-              <div className="pt-3">
-                <ReactAudioPlayer
-                  src={["/crush.mp3"]}
-                  autoPlay={true}
-                  loop={true}
-                  controls
-                  style={{ caretColor: "dark" }}
-                  // volume={0.5}
+              <div className="pt-4">
+                <MusicPlayer
+                  tracks={[
+                    { name: "Crush", singer: "Cyrill", musicSrc: "/crush.mp3" },
+                    { name: "Someday", singer: "The Strokes", musicSrc: "/Someday.mp3" },
+                    { name: "Rumah Ke Rumah", singer: "Hindia", musicSrc: "/rumahkerumah.mp3" },
+                    // { name: "Aspalela", singer: "Joe Flizzow", musicSrc: "/Aspalela.mp3" },
+                  ]}
                 />
               </div>
             </div>

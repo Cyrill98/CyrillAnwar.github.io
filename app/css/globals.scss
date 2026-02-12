@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Disable text selection and copying */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Re-enable selection for inputs so users can still type */
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 :root {
   --foreground-rgb: rgb(211, 216, 232);
 }

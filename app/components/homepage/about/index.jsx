@@ -3,6 +3,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import { profileImg } from "@/utils/data/profileImg";
 import dynamic from "next/dynamic";
+import Typewriter from "../../helper/typewriter";
 
 const CardDeck = dynamic(() => import("./card-deck"), { ssr: false });
 const MusicPlayer = dynamic(() => import("./music-player"), { ssr: false });
@@ -24,7 +25,11 @@ function AboutSection() {
               Who I am?
             </p>
             <p className="text-gray-200 text-sm lg:text-lg">
-              {personalData.description}
+              <Typewriter
+                text={personalData.description}
+                speed={20}
+                delay={800}
+              />
             </p>
           </div>
 

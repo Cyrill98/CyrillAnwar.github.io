@@ -1,4 +1,5 @@
 // @flow strict
+"use client";
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
@@ -8,6 +9,7 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { FaInstagram, FaTiktok } from "react-icons/fa6";
 import { RiContactsFill } from "react-icons/ri";
 import ResumeButton from "./resume-button";
+import CodeTypewriter from "../../helper/code-typewriter";
 
 function HeroSection() {
   return (
@@ -99,6 +101,7 @@ function HeroSection() {
           </div>
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
+              <CodeTypewriter lineDelay={100} startDelay={600}>
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>
                 <span className="mr-2 text-white">coder</span>
@@ -196,6 +199,7 @@ function HeroSection() {
               <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
               <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
               <div><span className="text-gray-400">{`};`}</span></div>
+              </CodeTypewriter>
             </code>
           </div>
         </div>

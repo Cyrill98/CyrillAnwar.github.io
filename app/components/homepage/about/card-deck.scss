@@ -1,7 +1,7 @@
 .deck-container {
   position: relative;
   width: 360px;
-  height: 550px;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
 .deck-card {
   position: absolute;
   width: 340px;
-  height: 510px;
+  height: 650px;
   will-change: transform;
   display: flex;
   align-items: center;

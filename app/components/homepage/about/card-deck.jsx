@@ -87,7 +87,7 @@ function CardDeck({ images }) {
             <Image
               src={images[i].img}
               width={340}
-              height={510}
+              height={650}
               alt={`Profile photo ${i + 1}`}
               className="w-full h-full object-cover"
               draggable={false}

@@ -1,7 +1,7 @@
 .deck-container {
   position: relative;
   width: 360px;
-  height: 480px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
 .deck-card {
   position: absolute;
   width: 340px;
-  height: 440px;
+  height: 510px;
   will-change: transform;
   display: flex;
   align-items: center;
@@ -53,11 +53,11 @@
 @media (max-width: 640px) {
   .deck-container {
     width: 300px;
-    height: 400px;
+    height: 470px;
   }
 
   .deck-card {
     width: 280px;
-    height: 370px;
+    height: 420px;
   }
 }

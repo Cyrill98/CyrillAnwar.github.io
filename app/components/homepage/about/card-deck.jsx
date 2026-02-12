@@ -15,8 +15,6 @@ const toSpring = (i) => ({
   delay: i * 100,
 });
 
-const fromSpring = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
-
 // Interpolate rotation and scale into a CSS transform
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
@@ -26,7 +24,7 @@ function CardDeck({ images }) {
 
   const [props, api] = useSprings(images.length, (i) => ({
     ...toSpring(i),
-    from: fromSpring(i),
+    from: toSpring(i),
   }));
 
   const bind = useDrag(
@@ -88,8 +86,8 @@ function CardDeck({ images }) {
           >
             <Image
               src={images[i].img}
-              width={300}
-              height={400}
+              width={340}
+              height={440}
               alt={`Profile photo ${i + 1}`}
               className="w-full h-full object-cover"
               draggable={false}

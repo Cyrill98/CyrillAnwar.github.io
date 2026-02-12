@@ -1,11 +1,11 @@
 // @flow strict
 "use client";
 import { personalData } from "@/utils/data/personal-data";
-import Image from "next/image";
 import ReactAudioPlayer from "react-audio-player";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import { profileImg } from "@/utils/data/profileImg";
+import dynamic from "next/dynamic";
+
+const CardDeck = dynamic(() => import("./card-deck"), { ssr: false });
 
 function AboutSection() {
   return (
@@ -31,30 +31,7 @@ function AboutSection() {
           {/* Right section for image and music player */}
           <div className="flex justify-center order-1 lg:order-2">
             <div className="flex flex-col items-center">
-              <Carousel
-                showStatus={false}
-                dynamicHeight={false}
-                showThumbs={false}
-                swipeable
-                infiniteLoop={true}
-                autoPlay
-                emulateTouch
-                className="max-w-xs lg:max-w-sm" // Restricting the carousel width
-              >
-                  {
-                    profileImg.map((img, index) => {return (
-                      <div className="min-h-[200px] min-w-[200px]" key={img.id}>
-                      <Image
-                        src={img.img}
-                        width={160}
-                        height={200}
-                        alt="profile-2"
-                        className="w-full h-full object-cover"
-                      />
-                </div>
-                    )})
-                  }
-              </Carousel>
+              <CardDeck images={profileImg} />
               <div className="pt-3">
                 <ReactAudioPlayer
                   src={["/crush.mp3"]}

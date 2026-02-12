@@ -14,7 +14,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  background-color: #060a18;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(26, 20, 67, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 75% 15%, rgba(59, 30, 120, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 65% 80%, rgba(22, 242, 179, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(22, 242, 179, 0.06) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
 #sticky-card-1 {

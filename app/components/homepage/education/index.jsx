@@ -15,10 +15,11 @@ function Education() {
     >
       <Image
         src="/section.svg"
-        alt="Hero"
+        alt=""
         width={1572}
         height={795}
         className="absolute top-0 -z-10"
+        loading="lazy"
       />
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
@@ -54,10 +55,11 @@ function Education() {
                   <div className="p-3 relative text-white">
                     <Image
                       src="/blur-23.svg"
-                      alt="Hero"
+                      alt=""
                       width={1080}
                       height={200}
                       className="absolute bottom-0 opacity-80"
+                      loading="lazy"
                     />
                     <div className="flex justify-center">
                       <p className="text-xs sm:text-sm text-[#16f2b3]">
@@ -68,9 +70,10 @@ function Education() {
                       <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                         <Image
                           src={education?.logo}
-                          alt="Description"
+                          alt={education.institution}
                           width={75}
                           height={75}
+                          loading="lazy"
                         />
                       </div>
                       <div>

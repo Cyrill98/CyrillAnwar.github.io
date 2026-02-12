@@ -91,7 +91,7 @@ function CardDeck({ images }) {
               alt={`Profile photo ${i + 1}`}
               className="w-full h-full object-cover"
               draggable={false}
-              priority={i === images.length - 1}
+              loading="lazy"
             />
           </animated.div>
         </animated.div>

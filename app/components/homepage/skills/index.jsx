@@ -53,7 +53,6 @@ function Skills() {
                       width={40}
                       height={40}
                       className="h-full w-auto rounded-lg"
-                      loading="lazy"
                     />
                   </div>
                   <p className="text-white text-sm sm:text-lg">

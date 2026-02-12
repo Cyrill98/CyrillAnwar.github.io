@@ -13,11 +13,10 @@ function BlogCard({ blog }) {
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
           src={blog?.cover_image}
-          height={320}
-          width={560}
-          alt={blog?.title || 'Blog post cover'}
+          height={1080}
+          width={1920}
+          alt=""
           className='h-full w-full group-hover:scale-110 transition-all duration-300'
-          loading="lazy"
         />
       </div>
       <div className="p-2 sm:p-3 flex flex-col">

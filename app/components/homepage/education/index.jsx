@@ -32,14 +32,14 @@ function Education() {
                   key={education.id}
                   identifier={`education-${education.id}`}
                 >
-                  <div className="p-3 relative text-white">
+                  <div className="p-3 relative text-fg">
                     <div className="flex justify-center">
-                      <p className="text-xs sm:text-sm text-[#16f2b3]">
+                      <p className="text-xs sm:text-sm text-accent">
                         {education.duration}
                       </p>
                     </div>
                     <div className="flex items-center gap-x-8 px-3 py-5">
-                      <div className="text-white  transition-all duration-300 hover:scale-125">
+                      <div className="text-fg  transition-all duration-300 hover:scale-125">
                         <Image
                           src={education?.logo}
                           alt="Description"
@@ -51,7 +51,7 @@ function Education() {
                         <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                           {education.title}
                         </p>
-                        <p className="text-yellow-400 text-sm sm:text-base">
+                        <p className="text-accent text-sm sm:text-base">
                           {education.institution}
                         </p>
                       </div>

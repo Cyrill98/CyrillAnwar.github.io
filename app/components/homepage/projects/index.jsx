@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <div id='projects' className="relative z-50 my-16 lg:my-28">
-      <div className="sticky top-16 z-10 py-3 bg-[#070b14]/70 backdrop-blur-md">
+      <div className="sticky top-16 z-10 py-3 bg-canvas/70 backdrop-blur-md">
         <SectionHeading index="04" title="Projects" />
       </div>
 

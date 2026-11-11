@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import ThemeToggle from "./helper/theme-toggle";
 
 const links = [
   { label: "About", href: "/#about" },
@@ -27,17 +28,17 @@ function Navbar() {
     <header
       className={`sticky top-0 z-[100] -mx-6 sm:-mx-12 px-6 sm:px-12 transition-all duration-300 ${
         scrolled || open
-          ? "bg-[#070b14]/80 backdrop-blur-xl border-b border-white/10"
+          ? "bg-canvas/80 backdrop-blur-xl border-b border-fg/10"
           : "border-b border-transparent"
       }`}
     >
       <nav className="flex items-center justify-between py-4">
         <Link
           href="/"
-          className="font-mono text-lg font-semibold tracking-tight text-white"
+          className="font-mono text-lg font-semibold tracking-tight text-fg"
           onClick={() => setOpen(false)}
         >
-          cyrill<span className="text-[#16f2b3]">.dev</span>
+          cyrill<span className="text-accent">.dev</span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-1 text-sm">
@@ -45,31 +46,37 @@ function Navbar() {
             <li key={l.label}>
               <Link
                 href={l.href}
-                className="block rounded-full px-4 py-2 text-gray-300 transition-colors duration-200 hover:bg-white/5 hover:text-[#16f2b3]"
+                className="block rounded-full px-4 py-2 text-fg/80 transition-colors duration-200 hover:bg-fg/5 hover:text-accent"
               >
                 {l.label}
               </Link>
             </li>
           ))}
-          <li className="ml-2">
+          <li className="ml-1">
+            <ThemeToggle />
+          </li>
+          <li className="ml-1">
             <Link
               href="/#contact"
-              className="block rounded-full border border-[#16f2b3]/50 px-4 py-2 text-[#16f2b3] transition-colors duration-200 hover:bg-[#16f2b3] hover:text-[#070b14]"
+              className="block rounded-full border border-accent/50 px-4 py-2 text-accent transition-colors duration-200 hover:bg-accent hover:text-accent-fg"
             >
               Contact
             </Link>
           </li>
         </ul>
 
+        <div className="md:hidden flex items-center gap-1">
+        <ThemeToggle />
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden rounded-lg p-2 text-white hover:bg-white/5"
+          className="rounded-lg p-2 text-fg hover:bg-fg/5"
         >
           {open ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
         </button>
+        </div>
       </nav>
 
       {open && (
@@ -79,7 +86,7 @@ function Navbar() {
               <Link
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-3 text-gray-200 hover:bg-white/5 hover:text-[#16f2b3]"
+                className="block rounded-lg px-3 py-3 text-fg/90 hover:bg-fg/5 hover:text-accent"
               >
                 {l.label}
               </Link>

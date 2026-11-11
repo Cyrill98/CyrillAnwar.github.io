@@ -34,12 +34,12 @@ function Experience() {
                 >
                   <div className="p-3 relative">
                     <div className="flex justify-center">
-                      <p className="text-xs sm:text-sm text-[#16f2b3]">
+                      <p className="text-xs sm:text-sm text-accent">
                         {experience.duration}
                       </p>
                     </div>
                     <div className="flex items-center gap-x-8 px-3 py-5">
-                      <div className="text-white  transition-all duration-300 hover:scale-125">
+                      <div className="text-fg  transition-all duration-300 hover:scale-125">
                         <Image
                           src={experience.logo}
                           alt="Description"
@@ -48,7 +48,7 @@ function Experience() {
                         />
                       </div>
                       <div>
-                        <p className="text-[#16f2b3] text-base sm:text-xl mb-2 font-medium uppercase">
+                        <p className="text-accent text-base sm:text-xl mb-2 font-medium uppercase">
                           {experience.title}
                         </p>
                         <p className="text-sm sm:text-base">

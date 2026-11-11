@@ -17,10 +17,10 @@ function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left section for text */}
           <div className="order-2 lg:order-1">
-            <p className="font-mono mb-4 text-[#16f2b3] text-sm tracking-widest uppercase">
+            <p className="font-mono mb-4 text-accent text-sm tracking-widest uppercase">
               Who I am?
             </p>
-            <p className="text-gray-300 text-base lg:text-lg leading-relaxed">
+            <p className="text-fg/80 text-base lg:text-lg leading-relaxed">
               <Typewriter
                 text={personalData.description}
                 speed={20}

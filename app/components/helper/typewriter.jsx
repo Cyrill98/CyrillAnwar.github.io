@@ -36,7 +36,7 @@ function Typewriter({ text, speed = 30, delay = 500, className = "" }) {
     <span className={className}>
       {displayedText}
       {!done && started && (
-        <span className="inline-block w-[2px] h-[1em] bg-[#16f2b3] ml-1 align-middle animate-pulse" />
+        <span className="inline-block w-[2px] h-[1em] bg-accent ml-1 align-middle animate-pulse" />
       )}
     </span>
   );

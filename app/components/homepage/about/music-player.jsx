@@ -95,19 +95,19 @@ function MusicPlayer({ tracks = [] }) {
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-[340px] sm:w-[360px] rounded-2xl border border-[#1b2c68a0] bg-gradient-to-br from-[#0d1224] to-[#0a0d37] p-4 shadow-xl">
+    <div className="w-[340px] sm:w-[360px] rounded-2xl border border-fg/10 bg-gradient-to-br from-surface to-surface p-4 shadow-xl">
       <audio ref={audioRef} src={track?.musicSrc} preload="metadata" />
 
       {/* Track info */}
       <div className="flex items-center gap-3 mb-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500/20 to-violet-600/20 ring-1 ring-pink-500/20">
-          <IoMusicalNotes className="text-pink-500" size={18} />
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-accent/20 to-indigo-500/20 ring-1 ring-accent/20">
+          <IoMusicalNotes className="text-accent" size={18} />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-semibold text-white">
+          <p className="truncate text-sm font-semibold text-fg">
             {track?.name || "No track"}
           </p>
-          <p className="truncate text-xs text-gray-400">
+          <p className="truncate text-xs text-fg/60">
             {track?.singer || "Unknown artist"}
           </p>
         </div>
@@ -116,11 +116,11 @@ function MusicPlayer({ tracks = [] }) {
       {/* Progress bar */}
       <div className="mb-2">
         <div
-          className="group relative h-1.5 w-full cursor-pointer rounded-full bg-[#1b2c68] transition-all hover:h-2"
+          className="group relative h-1.5 w-full cursor-pointer rounded-full bg-fg/15 transition-all hover:h-2"
           onClick={handleSeek}
         >
           <div
-            className="absolute left-0 top-0 h-full rounded-full bg-gradient-to-r from-pink-500 to-violet-600 transition-all"
+            className="absolute left-0 top-0 h-full rounded-full bg-accent transition-all"
             style={{ width: `${progress}%` }}
           />
           <div
@@ -128,7 +128,7 @@ function MusicPlayer({ tracks = [] }) {
             style={{ left: `${progress}%`, transform: `translate(-50%, -50%)` }}
           />
         </div>
-        <div className="mt-1 flex justify-between text-[10px] text-gray-500">
+        <div className="mt-1 flex justify-between text-[10px] text-fg/50">
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>
@@ -139,7 +139,7 @@ function MusicPlayer({ tracks = [] }) {
         {/* Volume */}
         <button
           onClick={toggleMute}
-          className="text-gray-400 transition-colors hover:text-white"
+          className="text-fg/60 transition-colors hover:text-fg"
         >
           {isMuted || volume === 0 ? (
             <HiVolumeOff size={18} />
@@ -153,14 +153,14 @@ function MusicPlayer({ tracks = [] }) {
           {tracks.length > 1 && (
             <button
               onClick={handlePrev}
-              className="text-gray-400 transition-colors hover:text-white"
+              className="text-fg/60 transition-colors hover:text-fg"
             >
               <BsSkipBackwardFill size={16} />
             </button>
           )}
           <button
             onClick={togglePlay}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 text-white shadow-lg shadow-pink-500/20 transition-all hover:scale-105 hover:shadow-pink-500/30 active:scale-95"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-accent hover:bg-accent/80 text-accent-fg shadow-lg shadow-accent/20 transition-all hover:scale-105 hover:shadow-accent/30 active:scale-95"
           >
             {isPlaying ? (
               <BsPauseFill size={22} />
@@ -171,7 +171,7 @@ function MusicPlayer({ tracks = [] }) {
           {tracks.length > 1 && (
             <button
               onClick={handleNext}
-              className="text-gray-400 transition-colors hover:text-white"
+              className="text-fg/60 transition-colors hover:text-fg"
             >
               <BsSkipForwardFill size={16} />
             </button>
@@ -189,7 +189,7 @@ function MusicPlayer({ tracks = [] }) {
             setVolume(parseFloat(e.target.value));
             setIsMuted(false);
           }}
-          className="w-16 h-1 appearance-none rounded-full bg-[#1b2c68] accent-pink-500 cursor-pointer [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-pink-500"
+          className="w-16 h-1 appearance-none rounded-full bg-fg/15 accent-accent cursor-pointer [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-accent"
         />
       </div>
     </div>

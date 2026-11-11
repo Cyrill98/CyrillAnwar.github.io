@@ -83,7 +83,7 @@ const GlowCard = ({ children , identifier, navigate}) => {
 
   return (
     <div className={`glow-container-${identifier} glow-container`}>
-      <article onClick={() => navigateCompanyWebsite(navigate)} className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-[#2a2e5a] transition-all duration-300 relative bg-[#101123] text-gray-200 rounded-xl hover:border-transparent w-full`}>
+      <article onClick={() => navigateCompanyWebsite(navigate)} className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-fg/10 transition-all duration-300 relative bg-surface text-fg/90 rounded-xl hover:border-transparent w-full`}>
         <div className="glows"></div>
         {children}
       </article>

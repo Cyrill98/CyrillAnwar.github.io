@@ -41,7 +41,7 @@ function CodeTypewriter({ children, lineDelay = 120, startDelay = 500 }) {
       ))}
       {!done && started && (
         <div className="flex items-center h-5 ml-4 lg:ml-8">
-          <span className="inline-block w-[8px] h-[18px] bg-pink-500/80 animate-pulse rounded-sm" />
+          <span className="inline-block w-[8px] h-[18px] bg-accent/80 animate-pulse rounded-sm" />
         </div>
       )}
     </>

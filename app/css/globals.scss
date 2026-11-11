@@ -19,25 +19,79 @@ textarea {
   user-select: text;
 }
 
-:root {
-  --foreground-rgb: rgb(211, 216, 232);
+:root,
+[data-theme="dark"] {
+  --bg: 7 11 20;
+  --surface: 12 19 34;
+  --fg: 255 255 255;
+  --accent: 22 242 179;
+  --accent-fg: 7 11 20;
+  /* code editor syntax: dark = current look */
+  --syn-kw: 22 242 179;
+  --syn-str: 252 211 77;
+  --syn-num: 251 146 60;
+  --syn-prop: 255 255 255;
+  --syn-pun: 156 163 175;
+  --syn-var: 34 211 238;
+  --syn-fn: 74 222 128;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
+[data-theme="light"] {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --fg: 15 23 42;
+  --accent: 5 150 105;
+  --accent-fg: 255 255 255;
+  /* code editor syntax: VS Code Light+ */
+  --syn-kw: 0 0 255;
+  --syn-str: 163 21 21;
+  --syn-num: 9 134 88;
+  --syn-prop: 0 16 128;
+  --syn-pun: 59 59 59;
+  --syn-var: 4 81 165;
+  --syn-fn: 121 94 38;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: #060a18;
+  color: rgb(var(--fg) / 0.9);
+  background-color: rgb(var(--bg));
   background-image:
-    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(26, 20, 67, 0.7) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 75% 15%, rgba(59, 30, 120, 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 60% at 65% 80%, rgba(22, 242, 179, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(22, 242, 179, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 45% at 15% 0%, rgb(var(--accent) / 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 20%, rgba(99, 102, 241, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgb(var(--accent) / 0.05) 0%, transparent 60%);
   background-attachment: fixed;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--accent));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 #sticky-card-1 {

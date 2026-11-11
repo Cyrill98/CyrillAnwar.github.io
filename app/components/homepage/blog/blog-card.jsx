@@ -36,7 +36,7 @@ function BlogCard({ blog }) {
           </div>
         </div>
         <Link target='_blank' href={blog.url}>
-          <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-violet-500'>
+          <p className='my-2 lg:my-3 cursor-pointer text-lg text-white sm:text-xl font-medium hover:text-[#16f2b3]'>
             {blog.title}
           </p>
         </Link>
@@ -48,7 +48,7 @@ function BlogCard({ blog }) {
         </p>
         {/* <div className="">
           <Link target='_blank' href={blog.url}>
-            <button className='bg-violet-500 text-white px-3 py-1.5 rounded-full text-xs'>
+            <button className='bg-[#16f2b3]/15 text-[#16f2b3] px-3 py-1.5 rounded-full text-xs'>
               Read More
             </button>
           </Link>

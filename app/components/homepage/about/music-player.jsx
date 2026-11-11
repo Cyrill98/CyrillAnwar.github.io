@@ -95,13 +95,13 @@ function MusicPlayer({ tracks = [] }) {
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="w-[340px] sm:w-[360px] rounded-2xl border border-[#1b2c68a0] bg-gradient-to-br from-[#0d1224] to-[#0a0d37] p-4 shadow-xl">
+    <div className="w-[340px] sm:w-[360px] rounded-2xl border border-white/10 bg-gradient-to-br from-[#0c1322] to-[#0a1020] p-4 shadow-xl">
       <audio ref={audioRef} src={track?.musicSrc} preload="metadata" />
 
       {/* Track info */}
       <div className="flex items-center gap-3 mb-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500/20 to-violet-600/20 ring-1 ring-pink-500/20">
-          <IoMusicalNotes className="text-pink-500" size={18} />
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#16f2b3]/20 to-indigo-500/20 ring-1 ring-[#16f2b3]/20">
+          <IoMusicalNotes className="text-[#16f2b3]" size={18} />
         </div>
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-semibold text-white">
@@ -120,7 +120,7 @@ function MusicPlayer({ tracks = [] }) {
           onClick={handleSeek}
         >
           <div
-            className="absolute left-0 top-0 h-full rounded-full bg-gradient-to-r from-pink-500 to-violet-600 transition-all"
+            className="absolute left-0 top-0 h-full rounded-full bg-[#16f2b3] transition-all"
             style={{ width: `${progress}%` }}
           />
           <div
@@ -160,7 +160,7 @@ function MusicPlayer({ tracks = [] }) {
           )}
           <button
             onClick={togglePlay}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 text-white shadow-lg shadow-pink-500/20 transition-all hover:scale-105 hover:shadow-pink-500/30 active:scale-95"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#16f2b3] hover:bg-[#5cf7cc] text-[#070b14] shadow-lg shadow-[#16f2b3]/20 transition-all hover:scale-105 hover:shadow-[#16f2b3]/30 active:scale-95"
           >
             {isPlaying ? (
               <BsPauseFill size={22} />
@@ -189,7 +189,7 @@ function MusicPlayer({ tracks = [] }) {
             setVolume(parseFloat(e.target.value));
             setIsMuted(false);
           }}
-          className="w-16 h-1 appearance-none rounded-full bg-[#1b2c68] accent-pink-500 cursor-pointer [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-pink-500"
+          className="w-16 h-1 appearance-none rounded-full bg-[#1b2c68] accent-[#16f2b3] cursor-pointer [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#16f2b3]"
         />
       </div>
     </div>

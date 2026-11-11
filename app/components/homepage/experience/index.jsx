@@ -4,7 +4,6 @@ import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import experience from "/public/lottie/code.json";
 
 import SectionHeading from "../../helper/section-heading";
 
@@ -20,7 +19,7 @@ function Experience() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+              <AnimationLottie src="/lottie/code.json" />
             </div>
           </div>
 

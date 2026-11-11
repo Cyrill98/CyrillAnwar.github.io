@@ -10,17 +10,22 @@ import Skills from "./components/homepage/skills";
 import ScrollReveal from "./components/helper/scroll-reveal";
 
 async function getData() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+  try {
+    // Cache for an hour so the page isn't blocked on dev.to for every build/request.
+    const res = await fetch(
+      `https://dev.to/api/articles?username=${personalData.devUsername}`,
+      { next: { revalidate: 3600 } }
+    );
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    if (!res.ok) return [];
+
+    const data = await res.json();
+
+    return data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
+  } catch {
+    // Blog is non-critical: render the rest of the page if dev.to is unavailable.
+    return [];
   }
-
-  const data = await res.json();
-
-  const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
-
-  return filtered;
 };
 
 export default async function Home() {

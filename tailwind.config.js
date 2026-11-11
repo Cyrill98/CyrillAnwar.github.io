@@ -13,6 +13,13 @@ module.exports = {
         fg: 'rgb(var(--fg) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         'accent-fg': 'rgb(var(--accent-fg) / <alpha-value>)',
+        'syn-kw': 'rgb(var(--syn-kw) / <alpha-value>)',
+        'syn-str': 'rgb(var(--syn-str) / <alpha-value>)',
+        'syn-num': 'rgb(var(--syn-num) / <alpha-value>)',
+        'syn-prop': 'rgb(var(--syn-prop) / <alpha-value>)',
+        'syn-pun': 'rgb(var(--syn-pun) / <alpha-value>)',
+        'syn-var': 'rgb(var(--syn-var) / <alpha-value>)',
+        'syn-fn': 'rgb(var(--syn-fn) / <alpha-value>)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -63,12 +63,12 @@ function HeroSection() {
             ))}
           </div>
         </div>
-        <div data-theme="dark" className="order-1 lg:order-2 from-surface border-fg/10 relative rounded-lg border bg-gradient-to-r to-surface">
+        <div className="order-1 lg:order-2 from-surface border-fg/10 relative rounded-lg border bg-gradient-to-r to-surface shadow-xl shadow-fg/5 overflow-hidden">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-accent to-indigo-500"></div>
             <div className="h-[1px] w-full bg-gradient-to-r from-indigo-500 to-transparent"></div>
           </div>
-          <div className="px-4 lg:px-8 py-5">
+          <div className="px-4 lg:px-8 py-5 bg-fg/[0.04]">
             <div className="flex flex-row space-x-2">
               <div className="h-3 w-3 rounded-full bg-red-400"></div>
               <div className="h-3 w-3 rounded-full bg-orange-400"></div>
@@ -79,102 +79,102 @@ function HeroSection() {
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <CodeTypewriter lineDelay={100} startDelay={600}>
               <div className="blink">
-                <span className="mr-2 text-accent">const</span>
-                <span className="mr-2 text-fg">coder</span>
-                <span className="mr-2 text-accent">=</span>
-                <span className="text-fg/60">{'{'}</span>
+                <span className="mr-2 text-syn-kw">const</span>
+                <span className="mr-2 text-syn-prop">coder</span>
+                <span className="mr-2 text-syn-kw">=</span>
+                <span className="text-syn-pun">{'{'}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">name:</span>
-                <span className="text-fg/60">{`'`}</span>
-                <span className="text-amber-300">Cyrill Anwar</span>
-                <span className="text-fg/60">{`',`}</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">name:</span>
+                <span className="text-syn-pun">{`'`}</span>
+                <span className="text-syn-str">Cyrill Anwar</span>
+                <span className="text-syn-pun">{`',`}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">gender:</span>
-                <span className="text-accent">Male</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">gender:</span>
+                <span className="text-syn-str">Male</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">religion:</span>
-                <span className="text-accent">Muslim</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">religion:</span>
+                <span className="text-syn-str">Muslim</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">bornDate:</span>
-                <span className="text-orange-400">09/09/1998</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">bornDate:</span>
+                <span className="text-syn-num">09/09/1998</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">isSingleNoAwek:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">isSingleNoAwek:</span>
+                <span className="text-syn-kw">true</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-fg">skills:</span>
-                <span className="text-fg/60">{`['`}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">React Native</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-fg/60">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-fg/60">{"'],"}</span>
+                <span className=" text-syn-prop">skills:</span>
+                <span className="text-syn-pun">{`['`}</span>
+                <span className="text-syn-str">React</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">React Native</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">Redux</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">Express</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">NestJS</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">MySql</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">MongoDB</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">Docker</span>
+                <span className="text-syn-pun">{"', '"}</span>
+                <span className="text-syn-str">AWS</span>
+                <span className="text-syn-pun">{"'],"}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">hardWorker:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">hardWorker:</span>
+                <span className="text-syn-kw">true</span>
+                <span className="text-syn-pun">,</span>
               </div>
                             <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">quickLearner:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">quickLearner:</span>
+                <span className="text-syn-kw">true</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-fg">problemSolver:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-fg/60">,</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-prop">problemSolver:</span>
+                <span className="text-syn-kw">true</span>
+                <span className="text-syn-pun">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-fg/60">{'() {'}</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-syn-fn">hireable:</span>
+                <span className="text-syn-kw">function</span>
+                <span className="text-syn-pun">{'() {'}</span>
               </div>
               <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-fg/60">{`(`}</span>
+                <span className="ml-8 lg:ml-16 mr-2 text-syn-kw">return</span>
+                <span className="text-syn-pun">{`(`}</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-fg">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
+                <span className="ml-12 lg:ml-24 text-syn-kw">this.</span>
+                <span className="mr-2 text-syn-prop">hardWorker</span>
+                <span className="text-syn-str">&amp;&amp;</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-fg">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
+                <span className="ml-12 lg:ml-24 text-syn-kw">this.</span>
+                <span className="mr-2 text-syn-prop">problemSolver</span>
+                <span className="text-syn-str">&amp;&amp;</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-fg">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
+                <span className="ml-12 lg:ml-24 text-syn-kw">this.</span>
+                <span className="mr-2 text-syn-prop">skills.length</span>
+                <span className="mr-2 text-syn-str">&gt;=</span>
+                <span className="text-syn-num">5</span>
               </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-fg/60">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-fg/60">{`};`}</span></div>
-              <div><span className="text-fg/60">{`};`}</span></div>
+              <div><span className="ml-8 lg:ml-16 mr-2 text-syn-pun">{`);`}</span></div>
+              <div><span className="ml-4 lg:ml-8 text-syn-pun">{`};`}</span></div>
+              <div><span className="text-syn-pun">{`};`}</span></div>
               </CodeTypewriter>
             </code>
           </div>

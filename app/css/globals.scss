@@ -26,6 +26,14 @@ textarea {
   --fg: 255 255 255;
   --accent: 22 242 179;
   --accent-fg: 7 11 20;
+  /* code editor syntax: dark = current look */
+  --syn-kw: 22 242 179;
+  --syn-str: 252 211 77;
+  --syn-num: 251 146 60;
+  --syn-prop: 255 255 255;
+  --syn-pun: 156 163 175;
+  --syn-var: 34 211 238;
+  --syn-fn: 74 222 128;
   color-scheme: dark;
 }
 
@@ -35,6 +43,14 @@ textarea {
   --fg: 15 23 42;
   --accent: 5 150 105;
   --accent-fg: 255 255 255;
+  /* code editor syntax: VS Code Light+ */
+  --syn-kw: 0 0 255;
+  --syn-str: 163 21 21;
+  --syn-num: 9 134 88;
+  --syn-prop: 0 16 128;
+  --syn-pun: 59 59 59;
+  --syn-var: 4 81 165;
+  --syn-fn: 121 94 38;
   color-scheme: light;
 }
 

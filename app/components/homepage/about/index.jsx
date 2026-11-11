@@ -11,7 +11,7 @@ const MusicPlayer = dynamic(() => import("./music-player"), { ssr: false });
 
 function AboutSection() {
   return (
-    <div id="about" className="my-16 lg:my-28 relative">
+    <div id="about" className="my-16 lg:my-28 relative overflow-x-clip">
       <SectionHeading index="01" title="About" className="mb-10 lg:mb-14" />
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
